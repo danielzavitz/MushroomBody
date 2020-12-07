@@ -36,10 +36,13 @@ for i=1:row
         for k=1:trials %Loop through all network types and trials
             c = c_data{i,j,k};%Loop through all network types and trials
             
+            %Shuffle and expand OSN odor representations
+            Ishuff = realistic_OSN_responses(I);
+            
             %Determine PN responses to odors
             [pn_sens_vect] = pn_sensitivity_generator(sens_mean); %Determine PNs' sensitivity to inhibition (Hong and Wilson, 2015)
             pnsensdata{i,j,k} = pn_sens_vect;
-            pnact = pn_activity(I,pn_sens_vect,sigma); %Compute the PNs' response to OSN input
+            pnact = pn_activity(Ishuff,pn_sens_vect,sigma); %Compute the PNs' response to OSN input
             kcact_noapl = zeros(kcn,odornum);
             kc_input = c*pnact; %Compute PN input to KCs
             
