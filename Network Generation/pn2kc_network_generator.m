@@ -1,6 +1,6 @@
 %Network Generator
 %% Set Parameters and Preallocate
-load('bias_data_0s_to_1s.mat')
+load('bias_data.mat')
 load('group_data.mat')
 dob = [0 0.5 1];
 dog = [0 0.5 1];
