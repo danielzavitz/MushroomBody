@@ -9,10 +9,11 @@ function [] = data_generator(I,c_data,sens_mean,eps,beta)
 %all data saved
 %% Preallocate and set parameters
 [row,col,trials] = size(c_data);
+odornum = length(I)+5;
 kcdata = cell(row,col,trials);
 pndata = cell(row,col,trials);
 osndata = cell(row,col,trials);
-pnsensdata = cell(row,col,ntrials);
+pnsensdata = cell(row,col,trials);
 apldata = cell(row,col,trials);
 fvaldata =cell(row,col,trials,odornum);
 
