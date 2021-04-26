@@ -69,12 +69,12 @@ eps(eps=='.') = [];
 beta =num2str(beta);
 beta(beta=='.') = [];
 
-filename1 = strcat('kcdata_cloud_inputs','_eps',eps,'_beta',beta,'_nets',num2str(network_inds(1)),'_to_',num2str(network_inds(end)),'.mat');
-filename2 = strcat('pndata_cloud_inputs','_eps',eps,'_beta',beta,'_nets',num2str(network_inds(1)),'_to_',num2str(network_inds(end)),'.mat');
-filename3 = strcat('osndata_cloud_inputs','_eps',eps,'_beta',beta,'_nets',num2str(network_inds(1)),'_to_',num2str(network_inds(end)),'.mat');
-filename4 = strcat('pnsensdata_cloud_inputs','_eps',eps,'_beta',beta,'_nets',num2str(network_inds(1)),'_to_',num2str(network_inds(end)),'.mat');
-filename5 = strcat('apldata_cloud_inputs','_eps',eps,'_beta',beta,'_nets',num2str(network_inds(1)),'_to_',num2str(network_inds(end)),'.mat');
-filename6 = strcat('fvaldata_cloud_inputs','_eps',eps,'_beta',beta,'_nets',num2str(network_inds(1)),'_to_',num2str(network_inds(end)),'.mat');
+filename1 = strcat('kcdata_cloud_inputs','_eps',eps,'_beta',beta,'.mat');
+filename2 = strcat('pndata_cloud_inputs','_eps',eps,'_beta',beta,'.mat');
+filename3 = strcat('osndata_cloud_inputs','_eps',eps,'_beta',beta,'.mat');
+filename4 = strcat('pnsensdata_cloud_inputs','_eps',eps,'_beta',beta,'.mat');
+filename5 = strcat('apldata_cloud_inputs','_eps',eps,'_beta',beta,'.mat');
+filename6 = strcat('fvaldata_cloud_inputs','_eps',eps,'_beta',beta,'.mat');
     
 save(filename1,'kcdata');
 save(filename2,'pndata');
